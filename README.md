@@ -81,3 +81,4 @@ For a static site, push the files to GitHub. In the repository, open **Settings 
 `https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPOSITORY_NAME/`
 
 Use the actual URL shown in the Pages settings. The dashboard links work when all files stay in the same folder.
+Latest remote update: Project instructions verified by the team.
