@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Portal | Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="auth-page">
+  <main class="auth-card">
+    <div class="logo">📚</div>
+    <h1>Library Portal</h1>
+    <p class="muted">A simple library management dashboard</p>
+
+    <div class="tabs">
+      <button id="loginTab" class="tab active" type="button">Login</button>
+      <button id="signupTab" class="tab" type="button">Sign up</button>
+    </div>
+
+    <form id="loginForm">
+      <label for="loginEmail">Email</label>
+      <input id="loginEmail" type="email" placeholder="student@example.com" required>
+      <label for="loginPassword">Password</label>
+      <input id="loginPassword" type="password" placeholder="Enter password" required>
+      <button class="primary full" type="submit">Login</button>
+    </form>
+
+    <form id="signupForm" class="hidden">
+      <label for="signupName">Full name</label>
+      <input id="signupName" type="text" placeholder="Your name" required>
+      <label for="signupEmail">Email</label>
+      <input id="signupEmail" type="email" placeholder="you@example.com" required>
+      <label for="signupPassword">Password</label>
+      <input id="signupPassword" type="password" minlength="4" placeholder="At least 4 characters" required>
+      <label for="signupRole">Account type</label>
+      <select id="signupRole">
+        <option value="user">User</option>
+        <option value="admin">Admin (demo)</option>
+      </select>
+      <button class="primary full" type="submit">Create account</button>
+    </form>
+    <p id="message" class="message" aria-live="polite"></p>
+    <p class="small muted">Demo project: account details are saved in this browser using Local Storage.</p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

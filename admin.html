@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard | Library Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="admin">
+  <header class="topbar">
+    <a class="brand" href="admin.html">📚 Library Portal</a>
+    <div class="top-actions"><span id="welcomeName">Admin</span><button class="outline" onclick="logout()">Logout</button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="side-title">MENU</p>
+      <a class="side-link active" href="admin.html">Dashboard</a>
+      <a class="side-link" href="#books">Book list</a>
+      <a class="side-link" href="#members">Members</a>
+      <a class="side-link" href="user.html">User view</a>
+    </aside>
+    <main class="main-content">
+      <div class="page-heading">
+        <div><p class="eyebrow">OVERVIEW</p><h1>Admin Dashboard</h1><p class="muted">Manage books and view library activity.</p></div>
+        <button class="primary" id="addBookBtn">+ Add book</button>
+      </div>
+      <section class="stats-grid">
+        <article class="stat-card"><span class="stat-icon">📘</span><p>Total books</p><h2 id="bookCount">4</h2></article>
+        <article class="stat-card"><span class="stat-icon">👥</span><p>Registered members</p><h2 id="memberCount">0</h2></article>
+        <article class="stat-card"><span class="stat-icon">📖</span><p>Books available</p><h2 id="availableCount">3</h2></article>
+      </section>
+      <section class="panel" id="books">
+        <div class="panel-heading"><div><h2>Book collection</h2><p class="muted">A sample list of library books</p></div><input id="bookSearch" class="search" placeholder="Search books..."></div>
+        <div class="table-wrap"><table><thead><tr><th>Book title</th><th>Author</th><th>Category</th><th>Status</th><th>Action</th></tr></thead><tbody id="bookRows"></tbody></table></div>
+      </section>
+      <section class="panel" id="members"><h2>Members</h2><p class="muted">Member count is based on accounts saved in this browser.</p><div id="memberList" class="member-list"></div></section>
+      <p class="footer-note">Library Management System · Front-end lab mini project</p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

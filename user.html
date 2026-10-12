@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard | Library Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-page="user">
+  <header class="topbar">
+    <a class="brand" href="user.html">📚 Library Portal</a>
+    <div class="top-actions"><span id="welcomeName">Student</span><button class="outline" onclick="logout()">Logout</button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <p class="side-title">MENU</p>
+      <a class="side-link active" href="user.html">Dashboard</a>
+      <a class="side-link" href="#catalogue">Browse books</a>
+      <a class="side-link" href="#borrowed">My books</a>
+    </aside>
+    <main class="main-content">
+      <div class="page-heading">
+        <div><p class="eyebrow">WELCOME BACK</p><h1>My Library</h1><p class="muted">Find a book and keep track of your reading.</p></div>
+      </div>
+      <section class="welcome-banner"><div><p class="eyebrow light">YOUR READING SPACE</p><h2>Make time for a good book.</h2><p>Explore the catalogue and borrow an available title.</p></div><span class="banner-icon">📚</span></section>
+      <section class="stats-grid">
+        <article class="stat-card"><span class="stat-icon">📚</span><p>Books in catalogue</p><h2 id="userBookCount">4</h2></article>
+        <article class="stat-card"><span class="stat-icon">📗</span><p>My borrowed books</p><h2 id="borrowedCount">0</h2></article>
+        <article class="stat-card"><span class="stat-icon">⭐</span><p>Available to borrow</p><h2 id="userAvailableCount">3</h2></article>
+      </section>
+      <section class="panel" id="catalogue">
+        <div class="panel-heading"><div><h2>Browse books</h2><p class="muted">Choose an available book below.</p></div><input id="userBookSearch" class="search" placeholder="Search books..."></div>
+        <div id="bookCards" class="book-grid"></div>
+      </section>
+      <section class="panel" id="borrowed"><h2>My borrowed books</h2><div id="borrowedBooks" class="borrowed-list"><p class="muted">You have not borrowed any books yet.</p></div></section>
+      <p class="footer-note">Library Management System · Front-end lab mini project</p>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
